@@ -64,14 +64,13 @@ public class ProgramaController {
         }
     }
 
-/*    @GetMapping("/lucros/{id}")
+    @GetMapping("/lucros/{id}")
     public ResponseEntity lucrosPrograma(@PathVariable int id){
         if (programas.size() < id) {
             return ResponseEntity.notFound().build();
         }
         else {
-            return ResponseEntity.ok("O lucro total dessa emissora foi de " + programas);
-        }
+            return ResponseEntity.ok("O lucro do programa foi de " + programas.get(id-1).calculaLucro());
+}
     }
-*/
 }
