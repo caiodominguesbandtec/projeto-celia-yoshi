@@ -63,13 +63,13 @@ public class Jornal implements Programa {
     @Override
     public String toString() {
         return "Jornal{" +
-                "nomeJornal='" + nomeJornal + '\'' +
-                ", ancora='" + ancora + '\'' +
-                ", tema='" + tema + '\'' +
-                ", budget=" + budget +
-                ", propaganda=" + propaganda +
-                ", duracaoHorasJornal=" + duracaoHorasJornal +
-                ", lucro=" + calculaLucro() +
-                '}';
+                "nomeJornal='" + nomeJornal +
+                "," + '\n' + "ancora='" + ancora +
+                "," + '\n' + "tema='" + tema +
+                "," + '\n' + "budget=" + budget +
+                "," + '\n' + "propaganda=" + propaganda +
+                "," + '\n' + "duracaoHorasJornal=" + duracaoHorasJornal +
+                "," + '\n' + "lucro=" + calculaLucro() +
+                '}' + '\n';
     }
 }

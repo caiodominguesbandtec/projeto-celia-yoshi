@@ -63,8 +63,8 @@ public class ProgramaController {
     }
 
     @GetMapping("/lucros")
-    public ResponseEntity lucrosGeral(@PathVariable int id){
-        if (programas.size() < id) {
+    public ResponseEntity lucrosGeral(){
+        if (programas.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
         else {
@@ -72,7 +72,7 @@ public class ProgramaController {
             for (Programa p : programas) {
                 total += p.calculaLucro();
             }
-            return ResponseEntity.ok("O lucro total dessa emissora foi de " + total);
+            return ResponseEntity.ok("O lucro total dessa emissora foi de R$" + total);
         }
     }
 
@@ -82,7 +82,7 @@ public class ProgramaController {
             return ResponseEntity.notFound().build();
         }
         else {
-            return ResponseEntity.ok("O lucro do programa foi de " + programas.get(id-1).calculaLucro());
+            return ResponseEntity.ok("O lucro do programa foi de R$" + programas.get(id-1).calculaLucro());
         }
     }
 

@@ -19,7 +19,7 @@ public class Reality implements Programa {
 
     @Override
     public Double calculaLucro() {
-        return budget+patrocinio+premio/(participantes-1)+propaganda*duracaoHorasReality;
+        return budget+patrocinio-premio/(participantes-1)+propaganda*duracaoHorasReality;
     }
 
     public String getNomeReality() {
@@ -82,14 +82,14 @@ public class Reality implements Programa {
     public String toString() {
         return "Reality{" +
                 "nomeReality='" + nomeReality + '\'' +
-                ", apresentador='" + apresentador + '\'' +
-                ", budget=" + budget +
-                ", premio=" + premio +
-                ", patrocinio=" + patrocinio +
-                ", propaganda=" + propaganda +
-                ", duracaoHorasReality=" + duracaoHorasReality +
-                ", participantes=" + participantes +
-                ", lucro=" + calculaLucro() +
-                '}';
+                "," + '\n' + "apresentador='" + apresentador + '\'' +
+                "," + '\n' + "budget=" + budget +
+                "," + '\n' + "premio=" + premio +
+                "," + '\n' + "patrocinio=" + patrocinio +
+                "," + '\n' + "propaganda=" + propaganda +
+                "," + '\n' + "duracaoHorasReality=" + duracaoHorasReality +
+                "," + '\n' + "participantes=" + participantes +
+                "," + '\n' + "lucro=" + calculaLucro() +
+                '}' + '\n';
     }
 }

@@ -63,13 +63,13 @@ public class Cozinha implements Programa {
     @Override
     public String toString() {
         return "Cozinha{" +
-                "nomeCozinha='" + nomeCozinha + '\'' +
-                ", apresentador='" + apresentador + '\'' +
-                ", budget=" + budget +
-                ", patrocinio=" + patrocinio +
-                ", propaganda=" + propaganda +
-                ", duracaoHorasCozinha=" + duracaoHorasCozinha +
-                ", lucro=" + calculaLucro() +
-                '}';
+                "nomeCozinha='" + nomeCozinha +
+                "," + '\n' + "apresentador='" + apresentador +
+                "," + '\n' + "budget=" + budget +
+                "," + '\n' + "patrocinio=" + patrocinio +
+                "," + '\n' + "propaganda=" + propaganda +
+                "," + '\n' + "duracaoHorasCozinha=" + duracaoHorasCozinha +
+                "," + '\n' + "lucro=" + calculaLucro() +
+                '}' + '\n';
     }
 }
