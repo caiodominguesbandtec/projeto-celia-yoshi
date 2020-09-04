@@ -33,8 +33,20 @@ public class ProgramaController {
         }
     }
 
-    @PostMapping
-    public ResponseEntity cadastraPrograma(@RequestBody Programa novoPrograma) {
+    @PostMapping("/cozinha")
+    public ResponseEntity cadastraCozinha(@RequestBody Cozinha novoPrograma) {
+        programas.add(novoPrograma);
+        return ResponseEntity.created(null).build();
+    }
+
+    @PostMapping("/jornal")
+    public ResponseEntity cadastraJornal(@RequestBody Jornal novoPrograma) {
+        programas.add(novoPrograma);
+        return ResponseEntity.created(null).build();
+    }
+
+    @PostMapping("/reality")
+    public ResponseEntity cadastraPrograma(@RequestBody Reality novoPrograma) {
         programas.add(novoPrograma);
         return ResponseEntity.created(null).build();
     }
@@ -71,6 +83,63 @@ public class ProgramaController {
         }
         else {
             return ResponseEntity.ok("O lucro do programa foi de " + programas.get(id-1).calculaLucro());
-}
+        }
+    }
+
+    @GetMapping("/cozinha")
+    public ResponseEntity listarCozinha(){
+        if (programas.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        else {
+            String texto = "";
+            for (Programa p : programas) {
+                if (p instanceof Cozinha){
+                    texto += p.toString();
+                }
+            }
+            if (texto.equals("")){
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(texto);
+        }
+    }
+
+    @GetMapping("/jornal")
+    public ResponseEntity listarJornal(){
+        if (programas.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        else {
+            String texto = "";
+            for (Programa p : programas) {
+                if (p instanceof Jornal){
+                    texto += p.toString();
+                }
+            }
+            if (texto.equals("")){
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(texto);
+        }
+    }
+
+    @GetMapping("/reality")
+    public ResponseEntity listarReality(){
+        if (programas.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        else {
+            String texto = "";
+            for (Programa p : programas) {
+                if (p instanceof Reality){
+                    texto += p.toString();
+                }
+            }
+            if (texto.equals("")){
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(texto);
+        }
     }
 }
