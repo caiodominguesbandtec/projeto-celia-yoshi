@@ -59,4 +59,17 @@ public class Cozinha implements Programa {
     public void setDuracaoHorasCozinha(Integer duracaoHorasCozinha) {
         this.duracaoHorasCozinha = duracaoHorasCozinha;
     }
+
+    @Override
+    public String toString() {
+        return "Cozinha{" +
+                "nomeCozinha='" + nomeCozinha + '\'' +
+                ", apresentador='" + apresentador + '\'' +
+                ", budget=" + budget +
+                ", patrocinio=" + patrocinio +
+                ", propaganda=" + propaganda +
+                ", duracaoHorasCozinha=" + duracaoHorasCozinha +
+                ", lucro=" + calculaLucro() +
+                '}';
+    }
 }

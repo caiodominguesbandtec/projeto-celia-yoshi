@@ -59,4 +59,17 @@ public class Jornal implements Programa {
     public void setDuracaoHorasJornal(Integer duracaoHorasJornal) {
         this.duracaoHorasJornal = duracaoHorasJornal;
     }
+
+    @Override
+    public String toString() {
+        return "Jornal{" +
+                "nomeJornal='" + nomeJornal + '\'' +
+                ", ancora='" + ancora + '\'' +
+                ", tema='" + tema + '\'' +
+                ", budget=" + budget +
+                ", propaganda=" + propaganda +
+                ", duracaoHorasJornal=" + duracaoHorasJornal +
+                ", lucro=" + calculaLucro() +
+                '}';
+    }
 }

@@ -77,4 +77,19 @@ public class Reality implements Programa {
     public void setParticipantes(Integer participantes) {
         this.participantes = participantes;
     }
+
+    @Override
+    public String toString() {
+        return "Reality{" +
+                "nomeReality='" + nomeReality + '\'' +
+                ", apresentador='" + apresentador + '\'' +
+                ", budget=" + budget +
+                ", premio=" + premio +
+                ", patrocinio=" + patrocinio +
+                ", propaganda=" + propaganda +
+                ", duracaoHorasReality=" + duracaoHorasReality +
+                ", participantes=" + participantes +
+                ", lucro=" + calculaLucro() +
+                '}';
+    }
 }
