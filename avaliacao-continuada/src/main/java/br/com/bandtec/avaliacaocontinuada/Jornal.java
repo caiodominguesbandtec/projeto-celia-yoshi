@@ -1,6 +1,6 @@
 package br.com.bandtec.avaliacaocontinuada;
 
-public class Jornal implements Programa {
+public class Jornal extends Programa {
 
     private String nomeJornal, ancora, tema;
     private Double budget, propaganda;

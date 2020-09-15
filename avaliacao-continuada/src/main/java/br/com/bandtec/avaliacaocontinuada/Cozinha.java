@@ -1,6 +1,6 @@
 package br.com.bandtec.avaliacaocontinuada;
 
-public class Cozinha implements Programa {
+public class Cozinha extends Programa {
 
     private String nomeCozinha, apresentador;
     private Double budget, patrocinio, propaganda;

@@ -65,7 +65,7 @@ public class ProgramaController {
     @GetMapping("/lucros")
     public ResponseEntity lucrosGeral(){
         if (programas.isEmpty()) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         else {
             Double total = 0.0;
@@ -79,7 +79,7 @@ public class ProgramaController {
     @GetMapping("/lucros/{id}")
     public ResponseEntity lucrosPrograma(@PathVariable int id){
         if (programas.size() < id) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         else {
             return ResponseEntity.ok("O lucro do programa foi de R$" + programas.get(id-1).calculaLucro());
@@ -89,7 +89,7 @@ public class ProgramaController {
     @GetMapping("/cozinha")
     public ResponseEntity listarCozinha(){
         if (programas.isEmpty()) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         else {
             String texto = "";
@@ -108,7 +108,7 @@ public class ProgramaController {
     @GetMapping("/jornal")
     public ResponseEntity listarJornal(){
         if (programas.isEmpty()) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         else {
             String texto = "";
@@ -118,7 +118,7 @@ public class ProgramaController {
                 }
             }
             if (texto.equals("")){
-                return ResponseEntity.notFound().build();
+                return ResponseEntity.noContent().build();
             }
             return ResponseEntity.ok(texto);
         }
@@ -127,7 +127,7 @@ public class ProgramaController {
     @GetMapping("/reality")
     public ResponseEntity listarReality(){
         if (programas.isEmpty()) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.noContent().build();
         }
         else {
             String texto = "";

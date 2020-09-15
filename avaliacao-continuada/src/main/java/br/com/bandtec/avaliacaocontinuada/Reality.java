@@ -1,6 +1,6 @@
 package br.com.bandtec.avaliacaocontinuada;
 
-public class Reality implements Programa {
+public class Reality extends Programa {
 
     private String nomeReality, apresentador;
     private Double budget, premio, patrocinio, propaganda;
